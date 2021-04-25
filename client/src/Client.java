@@ -12,7 +12,7 @@ public class Client {
         InputStream response = socket.getInputStream();
         OutputStream request = socket.getOutputStream();
 
-        byte [] data = ("GET /data/2.5/weather?q=Finland&appid=fa11a742a4d2e48ad88945dcea73facb HTTP/1.1\n"
+        byte [] data = ("GET /data/2.5/weather?q=Finland&appid=[token] HTTP/1.1\n"
         + "Host: api.openweathermap.org\n\n").getBytes();
 
         request.write(data);
